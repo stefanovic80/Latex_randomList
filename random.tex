@@ -2,6 +2,11 @@
 \usepackage{etoolbox}
 \usepackage{pgfkeys}
 \usepackage{pgfmath}
+\usepackage{comment}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
 
 % code for generating a random permutation
 \newcounter{randomListLength}%   current length of our random list
@@ -82,12 +87,41 @@
 \setlist[Testlist]{label*=\alph*.}
 \setlist{nosep}\parindent=0pt% for more compact output
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \begin{document}
 
   \textbf{Enumerate example:}
 
   \begin{randomList}
-    \item First item
+    \item First item\\
+    Questo è un testo scritto in lingua italiana. Si noti che le parole accentate sono scritte secondo la tastiera italiana
 
     \item Second item
 
@@ -97,6 +131,15 @@
 
 
 
+\begin{figure}[h!]		
+	\centering
+   	\includegraphics[width=1.8in]{piccione.png}%
+  	\caption{Questo è il caption dell'immagine del piccione}
+   	\label{fig:piccione}
+\end{figure}
+
+
+In figura \ref{fig:piccione} si noti il ritratto di un piccione.
 
 
 
@@ -111,7 +154,13 @@
 
   \end{randomList}
 
+
   \textbf{Description example}
+
+
+\begin{comment}
+	That's a comment
+\end{comment}
 
   \begin{randomList}[description]
     \item[D1] First item
@@ -121,6 +170,9 @@
     \item[D3] Third item
 
   \end{randomList}
+
+
+
 
   \textbf{Testlist example with seed}
 
